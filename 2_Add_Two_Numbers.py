@@ -11,8 +11,14 @@ class ListNode:
         self.next = None
 
 
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
+
 class Solution:
-    def addTwoNpubers(self, l1, l2):
+    def addTwoNumbers(self, l1, l2):
         """
 
         :type l1: ListNode
@@ -28,9 +34,7 @@ class Solution:
             if l2:
                 carry += l2.val
                 l2 = l2.next
+            prev.next = ListNode(carry % 10)
             prev = prev.next
             carry //= 10
         return result.next
-ListNode()
-p=Solution()
-p.addTwoNpubers(342,465)
