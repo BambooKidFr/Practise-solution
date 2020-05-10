@@ -1,7 +1,8 @@
 # https://leetcode.com/problems/roman-to-integer/
 
+
 class Solution:
-    def romantoInt(self, s: str) -> int:
+    def romanToInt(self, s: str) -> int:
         doubles = {'CM': 900, 'CD': 400, 'XC': 90, 'XL': 50, 'IX': 9, 'IV': 4}
         singles = {'M': 1000, 'D': 500, 'C': 100, 'L': 50, 'X': 10, 'V': 5, 'I': 1}
 
@@ -18,5 +19,5 @@ class Solution:
 
 
 f = Solution()
-a = f.romantoInt(19)
+a = f.romantoInt('XIV')
 print(a)
